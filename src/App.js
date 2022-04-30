@@ -56,7 +56,11 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const Java = [1];
+const HTML = [1];
+const JavaScript = [1];
+const PHP = [1];
+
 function App(){
   const classes = useStyles();
   const [value, setValue] = React.useState('recents')
@@ -72,7 +76,7 @@ function App(){
           color="inherit" aria-laable="menu" className={classes.menuButton}>
             <MenuIcon/>
           </IconButton>
-          <Typography variant='h6'className={classes.title}>My site</Typography>
+          <Typography variant='h6'className={classes.title}>Programming School</Typography>
           <Box mr={3}>
             <Button color="inherit" variant='outlined'>Log In</Button>
           </Box>
@@ -82,7 +86,7 @@ function App(){
     </AppBar>
     <main>
       <Paper className={classes.mainFeaturesPost}
-        style={{backgroundImage:'url(https://source.unsplash.com/random)'}}>
+        style={{backgroundImage:'url(https://i.pinimg.com/originals/41/82/a9/4182a9dd330c6442c4a1fbc78274d838.png)'}}>
           <Container fixed>
             <div className={classes.overlay}/>
             <Grid container>
@@ -93,18 +97,15 @@ function App(){
                   variant='h3'
                   color='white'
                   gutterBottom>
-                    Bekzat's Site 
+                    Made by 
+                    Bekzat Ashikbayev
                   </Typography>
                   
                   <Typography
-                  component='h5'
+                  component='h2'
                   color='white'
                   paragraph className={classes.mainFeaturesPostContent}>
-                    My name is Bekzat Ashikbaev. 
-                    And I want a score of 100 for this work. 
-                    Because I connected everything Material UI. 
-                    I hope you can understand me. 
-                    By the way, how are you?
+                    Programming School 
                   </Typography>
                   <Button variant='contained' color='secondary'>
                     Learn More
@@ -116,18 +117,15 @@ function App(){
       </Paper>
       <div className={classes.mainContent}>
         <Container maxWidth='md'>
-          <Typography variant="h2" align='center' color='textPrimary' gutterBottom>
-            Bekzat Ashikbayev's site
+          <Typography variant="h1" align='center' color='textPrimary' gutterBottom>
+            Programming School
           </Typography>
           <Typography variant="h5" align='center' color='textSecondary' paragraph>
-          My name is Bekzat Ashikbaev. 
-          And I want a score of 100 for this work. 
-          Because I connected everything Material UI. 
-          I hope you can understand me. 
-          By the way, how are you?
-          Here I wanted to add more text, so I write as much as possible. 
-          I hope you understand me. 
-          Next I will work with the grid.
+          This programming school 
+          Make kids more clever
+          Our courses consist of 
+          Java, JavaScript, C++ etc.
+          Its very interesting
           </Typography>
           <div className={classes.mainButtons}>
             < Grid container spacing={5} justifyContent='center'>
@@ -142,27 +140,99 @@ function App(){
         </Container>
       </div>
       <Container className={classes.CardGrid} maxWidth='md'>
+        
         <Grid container spacing={4}>
-          {cards.map((card)=>
-          <Grid item key={card} xs={12} sm={6} md={4}>
-            <Card className={classes.card}>
+          {Java.map((Java)=>
+          <Grid item key={Java} xs={12} sm={6} md={4}>
+            <Card className={classes.Java}>
               <CardMedia className={classes.cardMedia}
-              image="https://source.unsplash.com/random"
+              image="https://dev.java/assets/images/java-logo-vert-blk.png"
               title='Image Title'/>
               <CardContent className={classes.cardContent}>
                 <Typography variant='h5' gutterBottom>
-                  Blog Post
+                  Java
                 </Typography>
                 <Typography>
-                  Blog Post. Ashikbaev Bekzat Blog Post. Ashikbaev Bekzat Blog Post. Ashikbaev Bekzat
+                If you want to start our study Press 'View'
                 </Typography>
               </CardContent>
               <CardActions>
                 <Button size='small' color='primary'>
                   View
                 </Button>
+               
+                <LayerIcon/>
+                <PlayCircleFilledIcon/>
+              </CardActions>
+            </Card>
+          </Grid>
+          )}
+          {JavaScript.map((Java)=>
+          <Grid item key={JavaScript} xs={12} sm={6} md={4}>
+            <Card className={classes.JavaScript}>
+              <CardMedia className={classes.cardMedia}
+              image="https://cdn.coursehunter.net/category/javascript.png"
+              title='Image Title'/>
+              <CardContent className={classes.cardContent}>
+                <Typography variant='h5' gutterBottom>
+                  JavaScript
+                </Typography>
+                <Typography>
+                If you want to start our study Press 'View'
+                </Typography>
+              </CardContent>
+              <CardActions>
                 <Button size='small' color='primary'>
-                  Edit
+                  View
+                </Button>
+                
+                <LayerIcon/>
+                <PlayCircleFilledIcon/>
+              </CardActions>
+            </Card>
+          </Grid>
+          )}
+          {HTML.map((Java)=>
+          <Grid item key={HTML} xs={12} sm={6} md={4}>
+            <Card className={classes.HTML}>
+              <CardMedia className={classes.cardMedia}
+              image="https://itproger.com/img/courses/1476977240.jpg"
+              title='Image Title'/>
+              <CardContent className={classes.cardContent}>
+                <Typography variant='h5' gutterBottom>
+                  HTML
+                </Typography>
+                <Typography>
+                If you want to start our study Press 'View'
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size='small' color='primary'>
+                  View
+                </Button>
+                <LayerIcon/>
+                <PlayCircleFilledIcon/>
+              </CardActions>
+            </Card>
+          </Grid>
+          )}
+          {PHP.map((Java)=>
+          <Grid item key={PHP} xs={12} sm={6} md={4}>
+            <Card className={classes.PHP}>
+              <CardMedia className={classes.cardMedia}
+              image="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png"
+              title='Image Title'/>
+              <CardContent className={classes.cardContent}>
+                <Typography variant='h5' gutterBottom>
+                  PHP
+                </Typography>
+                <Typography>
+                  If you want to start our study Press 'View'
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size='small' color='primary'>
+                  View
                 </Button>
                 <LayerIcon/>
                 <PlayCircleFilledIcon/>
@@ -194,7 +264,7 @@ function App(){
         icon={<FolderIcon/>}/>
       </BottomNavigation>
       <Typography align='center' color='textSecondary' component='p' variant='subtitle1'>
-        Ashikbaev Bekzat's Blog with React and MUI
+        Designed by Bekzat Ashikbayev
       </Typography>
     </footer>
 
